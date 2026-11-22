@@ -1,0 +1,51 @@
+name: 分享一条知识
+description: 发一条可复用的经验：一条只讲一个知识点，写清数值、条件与边界。
+title: "[KB] "
+labels: ["kb-submit"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: 标题
+      description: 不超过 20 字，要能直接当检索词（例：矩阵主备切换耗时）
+      placeholder: 矩阵主备切换耗时
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      description: 决定问答时按什么意图优先命中
+      options:
+        - 制度
+        - 规程
+        - 故障
+        - 阈值
+        - 术语
+        - 经验
+    validations:
+      required: true
+  - type: input
+    id: tags
+    attributes:
+      label: 标签
+      description: 逗号分隔，最多 4 个（例：矩阵, 主备）
+      placeholder: 矩阵, 主备
+    validations:
+      required: false
+  - type: input
+    id: source
+    attributes:
+      label: 来源
+      description: 单位 + 月份（例：河北广电 平台运维部 · 2026-11）
+      placeholder: 河北广电 平台运维部 · 2026-11
+    validations:
+      required: true
+  - type: textarea
+    id: body
+    attributes:
+      label: 正文
+      description: 40–600 字陈述句。不写内部 IP / 账号 / 人名 / 电话，不贴链接、代码块、图片。
+      placeholder: 万象矩阵单台支持 200 路切换，1+1 主备之间切换约 3 秒，自动返回主路约 5 秒……
+    validations:
+      required: true

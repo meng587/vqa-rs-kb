@@ -1,0 +1,33 @@
+name: 举报条目
+description: 某条知识有事实错误、与本厂口径冲突、或疑似广告，用这里报给版主。
+title: "[举报] "
+labels: ["kb-report"]
+body:
+  - type: input
+    id: ref
+    attributes:
+      label: 举报条目
+      description: 填条目 id（形如 kb-2026-0001）或原帖链接
+      placeholder: kb-2026-0001
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: 原因
+      options:
+        - 事实错误
+        - 与本厂口径冲突
+        - 疑似广告或垃圾
+        - 含内部地址或敏感信息
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 补充说明
+      description: 说清哪里不对、正确口径是什么；有出处更好
+      placeholder: 该条写切换 3 秒，实际含下游重锁约 8 秒……
+    validations:
+      required: false
