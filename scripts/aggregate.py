@@ -185,19 +185,20 @@ def main():
         url = issue.get("html_url", f"https://github.com/{REPO}/issues/{issue['number']}")
 
         old = prev_by_id.get(item_id)
-        # 先按 v1 算指纹，与上一版不同就说明正文改过，版本号 +1
-        probe = hashlib.sha256(
-            f"## {title}\n\n{body}\n\n> 来源：{source or '社区投稿'} · id {item_id} · v1\n".encode("utf-8")
-        ).hexdigest()
-        version = 1
-        if old and old.get("sha256") and old["sha256"] != probe:
-            version = int(old.get("version", 1)) + 1
-
+        # 版本号只在下述情况下 +1：同一版本号的正文指纹和上一版不同（说明改过内容）
+        version = int(old.get("version", 1)) if old else 1
         text = (
             f"## {title}\n\n{body}\n\n"
             f"> 来源：{source or '社区投稿'} · id {item_id} · v{version} · 采纳 {stars}\n"
         )
-        digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+        digest = hashlib.sha256(text.replace("\r\n", "\n").encode("utf-8")).hexdigest()
+        if old and old.get("sha256") and old["sha256"] != digest:
+            version += 1
+            text = (
+                f"## {title}\n\n{body}\n\n"
+                f"> 来源：{source or '社区投稿'} · id {item_id} · v{version} · 采纳 {stars}\n"
+            )
+            digest = hashlib.sha256(text.replace("\r\n", "\n").encode("utf-8")).hexdigest()
 
         item = {
             "id": item_id,
@@ -221,7 +222,7 @@ def main():
 
     ITEMS.mkdir(exist_ok=True)
     for item_id, text in touched:
-        (ITEMS / f"{item_id}.md").write_text(text, encoding="utf-8")
+        (ITEMS / f"{item_id}.md").write_text(text, encoding="utf-8", newline="\n")
 
     approved.sort(key=lambda x: (not x["pinned"], -x["score"]))
     pending.sort(key=lambda x: x["id"])
