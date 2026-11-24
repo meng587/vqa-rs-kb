@@ -1,6 +1,6 @@
 {
   "v": 2,
-  "updated_at": "2026-11-23T20:18:19+0000",
+  "updated_at": "2026-11-24T05:22:02+0000",
   "count": 12,
   "approved": [
     {
@@ -19,7 +19,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 2,
-      "score": 1.0986,
+      "score": 1.0747,
       "pinned": true,
       "preview": "同一 VLAN 下 600 条以上组播流时，直播汇聚交换机的 IGMPv2 snooping querier 处理组播应",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/5"
@@ -40,7 +40,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 2,
-      "score": 1.0986,
+      "score": 1.0747,
       "pinned": true,
       "preview": "卫星主备接收机若主路 MP2、备路 AAC，一旦自动切备就会让老机顶盒音频缓存与本地时钟失配，表现为声音滞后约 2 秒，",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/2"
@@ -60,7 +60,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 2,
-      "score": 1.0986,
+      "score": 1.0747,
       "pinned": false,
       "preview": "三选一切换系统已经下线，现在所有切换都走 IP 矩阵。遇到切换类问题不要再按三选一链路排查，也不要把旧链路写进应急预案当",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/11"
@@ -81,7 +81,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 2,
-      "score": 1.0986,
+      "score": 1.0747,
       "pinned": false,
       "preview": "8 台矩阵按 4 组 1+1 主备部署：第一组接爱上信源到央视卫视，第二组接本地信源与地方频道，第三组给各市县与慢直播，",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/8"
@@ -101,7 +101,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 2,
-      "score": 1.0986,
+      "score": 1.0747,
       "pinned": false,
       "preview": "万象矩阵单台支持 200 路切换，1+1 主备之间切换约 3 秒，自动返回主路约 5 秒。判断切换慢时先分清是矩阵内部耗",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/1"
@@ -121,7 +121,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "统计频道数量必须区分上线、下线、停播三种状态，已下线频道不计入总数，已下线的平台也不参与统计。口径不统一时同一时段的数字",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/12"
@@ -142,7 +142,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "夏季云层厚是卫星信号变差的常见诱因，会触发接收机自动切备路；如果主备编码格式不一致，切换本身就变成二次故障源。天线极化方",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/10"
@@ -163,7 +163,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "技术中心的两台矩阵没有主备，属于单点风险：这两台上的切换与配置变更要避开直播高峰，变更前先确认可回退路径，并在值班记录里",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/9"
@@ -183,7 +183,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "交换机的 igmp-snooping 在版本配成 2 时，收到 v3 报文会直接在 VLAN 内广播而不做 snoopi",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/7"
@@ -203,7 +203,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "IGMPv3 相比 v2 取消了独立 Leave 报文与 Report Suppression，并支持源过滤，但只有交换",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/6"
@@ -224,7 +224,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "直播编码器 PTS 时间戳过大时，全平台都会音画不同步，与机顶盒型号和信源无关。这类问题靠切信源、重启任务都压不住，要升",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/4"
@@ -245,7 +245,7 @@
       "updated_at": "2026-11-23",
       "stars": 1,
       "comments": 0,
-      "score": 0.6931,
+      "score": 0.6781,
       "pinned": false,
       "preview": "只有老机顶盒用户反馈声音滞后、新机顶盒正常时，先切爱上信源（MP2 格式）应急恢复，再重启故障频道的卫星信源任务。如果全",
       "url": "https://github.com/meng587/vqa-rs-kb/issues/3"
